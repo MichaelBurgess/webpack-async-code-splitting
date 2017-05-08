@@ -1,0 +1,1 @@
+# webpack-async-code-splitting
