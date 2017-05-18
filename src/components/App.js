@@ -1,8 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom/es";
-import asyncComponent from "./asyncComponent";
+import { BrowserRouter as Router, Link } from "react-router-dom/es";
 
-const App = () => (
+const App = ({ routes }) => (
   <Router basename="some_dir">
     <div>
       <h2>Webpack Async Code Splitting</h2>
@@ -10,7 +9,7 @@ const App = () => (
       <ul>
         <li><Link to="/home">Home</Link></li>
       </ul>
-      <Route path="/home" component={asyncComponent(() => import(/* webpackChunkName: "home" */ "./Home"))} />
+      {routes}
     </div>
   </Router>
 );
