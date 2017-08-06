@@ -6,7 +6,7 @@ import App from "./components/App";
 import configureRoutes from "./configureRoutes";
 import configureStore from "./configureStore";
 import coreReducers from "./reducers/core";
-import ReducerRegistry from "./ReducerRegistry";
+import ReducerRegistry from "./reducerRegistry";
 
 const reducerRegistry = new ReducerRegistry(coreReducers);
 
